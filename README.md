@@ -69,6 +69,7 @@ I would like to use Spleeter's system to perform my own source separation and la
 5. Train
 6. Add checkpoint and models to pretrained_models dir
 7. Add 3stems.json to package source file
+8. Run
 
 #### Prepare dataset
 
@@ -81,7 +82,9 @@ I would like to use Spleeter's system to perform my own source separation and la
   * [SONYC Urban Sound Tagging](http://dcase.community/challenge2019/task-urban-sound-tagging)
   * [ESC-50](https://github.com/karolpiczak/ESC-50)
 
-Please move each sound file in the dataset to train/dataset/. Change each sound file format 44.1kHz/16bit stereo.
+Please move each sound file in the dataset to train/dataset/. 
+
+Change each sound file format 44.1kHz/16bit stereo.
 
 ```fish
 cd spleeter/train
