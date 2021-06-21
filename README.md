@@ -71,7 +71,7 @@ I would like to use Spleeter's system to perform my own source separation and la
 7. Add 3stems.json to package source file
 8. Run
 
-#### Prepare dataset
+### Prepare dataset
 
 * Human
   * [mozilla Common Voice](https://commonvoice.mozilla.org/ja/datasets)
@@ -96,7 +96,7 @@ python format_helps/mono-stereo.py dataset/human
 
 If you have another good dataset ready, please let me know!!
 
-#### Rewrite configs/master_config.json
+### Rewrite configs/master_config.json
 
 ```master_config.json
 {
@@ -107,7 +107,7 @@ If you have another good dataset ready, please let me know!!
 }
 ```
 
-#### Sort and prepare Dataset for train and test(human.wav / bird.wav / car.wav / mixture.wav)
+### Sort and prepare Dataset for train and test(human.wav / bird.wav / car.wav / mixture.wav)
 
 ```fish
 # Create 5min wav
@@ -125,7 +125,7 @@ python create_mixture.py train human_vol bird_vol car_vol
 In my case, I prepared 100 files in train and 20 files in test. 
 I haven't written a script for test, so you will have to manually move it from the train dir to test.
 
-#### Create csv file(master_trai.csv / master_validation.csv)
+### Create csv file(master_trai.csv / master_validation.csv)
 
 ```fish
 # Create master_train.csv
@@ -138,7 +138,7 @@ mv -F train/master_train.csv configs/
 mv -F train/master_test.csv configs/
 ```
 
-#### Train
+### Train
 
 ```fish
 spleeter train -p configs/master_config.json -d train
@@ -146,7 +146,7 @@ spleeter train -p configs/master_config.json -d train
 
 You may be get master_model dir including checkpoint / model.ckpt-200000.data-00000-of-00001 / model.ckpt-200000.index / model.ckpt-200000.meta.
 
-#### Add checkpoint and models to pretrained_models dir
+### Add checkpoint and models to pretrained_models dir
 
 ```fish
 # Create pretrained_model dir
@@ -160,7 +160,7 @@ mv master_model/model.ckpt-200000.meta pretrained_models/3stems
 mv master_model/.probe pretrained_models/3stems
 ```
 
-#### Add 3stems.json to package source file
+### Add 3stems.json to package source file
 
 If you run, it will spit out an error like the one below.
 
@@ -183,7 +183,7 @@ Need to move 3stems.json to $HOME/.pyenv/versions/3.7.7/lib/python3.7/site-packa
 mv train/3stems.json $HOME/.pyenv/versions/3.7.7/lib/python3.7/site-packages/spleeter/resources/
 ```
 
-#### Run
+### Run
 
 ```fish
 # Run
