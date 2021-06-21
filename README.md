@@ -125,10 +125,12 @@ python create_5m_wav.py dataset/category category vol
 python create_mixture.py train human_vol bird_vol car_vol
 ```
 
-In my case, I prepared 100 files in train and 20 files in test. 
+In my case, I prepared 5min 100 files in train and 5min 20 files in test. 
 I haven't written a script for test, so you will have to manually move it from the train dir to test.
 
 ### Create csv file(master_trai.csv / master_validation.csv)
+
+I referred to the study in musdb using spleeter.
 
 ```fish
 # Create master_train.csv
@@ -147,7 +149,9 @@ mv -F train/master_test.csv configs/
 spleeter train -p configs/master_config.json -d train
 ```
 
+In my case, the learning process took 10 days.
 You may be get master_model dir including checkpoint / model.ckpt-200000.data-00000-of-00001 / model.ckpt-200000.index / model.ckpt-200000.meta.
+If you want to get my train models -> [dropbox](https://www.dropbox.com/sh/y2yc1xpvwmoe82g/AAApNLsOF-CHTiVEaM05qieja?dl=0)
 
 ### Add checkpoint and models to pretrained_models dir
 
