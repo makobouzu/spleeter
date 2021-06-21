@@ -40,6 +40,7 @@ That being said, many cool projects have been built on top of ours. Notably the 
 ## Setting
 
 * Mac OS: Catalina
+* pyenv (pyenv-virtualenv)
 * fish
 * python 3.7.7
 
