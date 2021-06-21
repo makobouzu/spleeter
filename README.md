@@ -59,7 +59,10 @@ spleeter separate -p spleeter:2stems -o output audio_sample/audio_example.mp3
 
 ## Original Train
 
-I would like to use Spleeter's system to perform my own source separation and labeling. human / bird / car [3stems]
+I would like to use Spleeter's system to perform my own source separation and labeling. 
+
+human / bird / car [3stems]
+
 ### Train Process
 
 1. Prepare dataset
@@ -190,7 +193,6 @@ mv train/3stems.json $HOME/.pyenv/versions/3.7.7/lib/python3.7/site-packages/spl
 spleeter separate -p spleeter:3stems -o output audio_example.mp3
 ```
 
-
 ## Reference
 
 * Deezer Research - Source Separation Engine Story - deezer.io blog post:
@@ -220,21 +222,9 @@ If you use **Spleeter** in your work, please cite:
 
 The code of **Spleeter** is [MIT-licensed](LICENSE).
 
-## Disclaimer
-
-If you plan to use **Spleeter** on copyrighted material, make sure you get proper authorization from right owners beforehand.
-
 ## Troubleshooting
 
 **Spleeter** is a complex piece of software and although we continously try to improve and test it you may encounter unexpected issues running it. If that's the case please check the [FAQ page](https://github.com/deezer/spleeter/wiki/5.-FAQ) first as well as the list of [currently open issues](https://github.com/deezer/spleeter/issues)
-
-### Windows users
-
-   It appears that sometimes the shortcut command `spleeter` does not work properly on windows. This is a known issue that we will hopefully fix soon. In the meantime replace `spleeter separate` by `python -m spleeter separate` in command line and it should work.
-
-## Contributing
-
-If you would like to participate in the development of **Spleeter** you are more than welcome to do so. Don't hesitate to throw us a pull request and we'll do our best to examine it quickly. Please check out our [guidelines](.github/CONTRIBUTING.md) first.
 
 ## Note
 
